@@ -1,0 +1,17 @@
+= link_to item_path(item.id) do
+  .e__middle__container__border
+    .e__middle__container__border__content
+      .e__middle__container__border__content__image
+        = image_tag item.images[0].src.url
+        -if item.costomer.present?
+          .e__middle__container__border__content__image--triangle
+          .e__middle__container__border__content__image__soldout
+            SOLD
+      .e__middle__container__border__content__info
+        .e__middle__container__border__content__info__name
+          = item.name
+        .e__middle__container__border__content__info__price
+          ¥
+          = item.price
+          =icon('far','heart') do
+            %span 100

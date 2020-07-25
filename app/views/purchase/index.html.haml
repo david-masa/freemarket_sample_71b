@@ -1,0 +1,47 @@
+.c__container
+  .c__container__logo
+    = link_to image_tag('material/logo/logo.png', :width => '170', :height => '60'), root_path
+  .c__container__confirm
+    .c__container__confirm__title
+      %p.message 購入内容確認
+    .c__container__confirm--upper
+      .c__container__confirm--upper__flex__content
+        .c__container__confirm--upper__flex__content__image
+          = image_tag "#{@item.images.first.src}"
+        .c__container__confirm--upper__flex__content__list
+          %ul
+            %li.item__name
+              = @item.name
+            %li.item__price
+              ¥
+              = @item.price
+              (税込み、送料込み)
+    .c__container__confirm--row
+      .c__container__confirm--row__price
+        .c__container__confirm--row__price--flex
+          %p.message
+            支払い金額
+          %p.price__box
+            ¥
+            = @item.price
+            (税込み、送料込み)
+      .c__container__confirm--row__payment
+        %p.message
+          支払い方法
+        %p.message
+          クレジットカードのみの決済となります。
+      .c__container__confirm--row__address
+        %p.message
+          配送先（ご登録先住所への配送になります。）
+        %p.address
+          - if current_user.address.building.present?
+            #{@city}#{current_user.address.local}#{current_user.address.block}#{current_user.address.building}
+          - else
+            #{@city}#{current_user.address.local}#{current_user.address.block}
+      .c__container__confirm--row__submit
+        = form_tag(action: :pay, method: :post) do
+          %button.button 購入する
+    .end__logo__container
+      .end__logo__container__end__logo
+        = link_to image_tag('material/logo/logo.png', :width => '170', :height => '60'), root_path
+        %p :著作権:FURIMA.inc

@@ -1,0 +1,198 @@
+.d-header {
+  background-color:#f8f8f8;
+  width: 100vw;
+  height: 100px;
+}
+
+.d-main{
+  width: 100vw;
+  height: 100%;
+  background-color: #f8f8f8;
+}
+
+.d-showMain{
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-top: 40px;
+}
+
+
+
+.d-itemBox {
+  padding: 24px 200px 40px;
+  background-color: #ffffff;
+  &__price {
+    font-weight: bold;
+    text-align: center;
+  }
+  &__name {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  &__body {
+    margin: 16px 0 0;
+    ul {
+      li {
+        display: flex;
+        width: 560px;
+        align-items: center;
+        margin: 0 auto;
+        flex-direction: column;
+        img {
+          width: 100%;
+          object-fit: cover;
+          height: 346px;
+        }
+        ul {
+          display: flex;
+          justify-content: center;
+          margin-top: 10px;
+          li {
+            width: 25%;
+            margin: 0 10px 0 0;
+            img {
+              object-fit: cover;
+              height: 87px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__price {
+    margin: 24px 0 24px;
+    font-size: 46px;
+    text-align: center;
+  }
+
+  &__price-detail {
+    font-size: 16px;
+  }
+
+  .d-itemDetail {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .d-table {
+    margin-bottom: 20px;
+    font-size: 14px;
+    table {
+      display: table;
+      width: 100%;
+      border-collapse: collapse; 
+      tbody {
+        tr {
+          border: 1px solid #dedede;
+          th {
+            background-color: #EEEEEE;
+            width: 135px;
+            padding: 8px;
+            text-align: center;
+          }
+          td {
+            padding: 15px;
+          }
+        }
+      }
+    }
+  }
+ 
+}
+
+.d-optionalBtn:hover{
+  opacity: 0.5;
+}
+.d-likeBtn:hover{
+  opacity: 0.5;
+}
+
+.d-itemChangeBox{
+  padding: 24px 40px 40px;
+  text-align: center;
+  background-color: #ffffff;
+  &__btnList {
+    &__editBtn{
+      background-color: #3CCACE;
+      border: 1px solid #3CCACE;
+      color: #fff;
+    }
+    &__deleteBtn {
+      background-color: grey;
+      border: 1px solid grey;
+    }
+    &__buyBtn {
+      cursor: pointer;
+      background-color: #3CCACE;
+      border: 1px solid #3CCACE;
+      color: #fff;
+    }
+    &__soldOutNotice{
+      background-color: #3CCACE;
+      color: #fff;
+      margin: 16px 0px;
+      height: 53px;
+      line-height: 53px;
+    }
+    button {
+      width: 100%;
+      font-size: 16px;
+      line-height: 48px;
+      margin: 16px 0;
+    }
+    #d-edit {
+      background-color: #3CCACE;
+      border: 1px solid #3CCACE;
+      color: #fff;
+      width: 100%;
+      font-size: 16px;
+      line-height: 48px;
+      margin: 16px 0;
+      cursor: pointer;
+    }
+    input {
+      background-color: grey;
+      border: 1px solid grey;
+      width: 100%;
+      font-size: 16px;
+      line-height: 48px;
+      margin: 16px 0;
+      cursor: pointer;
+    }
+  }
+}
+
+
+.d-links {
+  font-size: 16px;
+  list-style: none;
+
+  li {
+    display: inline;
+    a{
+      color: #3CCACE;
+      text-decoration: none;
+    }
+  }
+  li:last-child {
+    float: right;
+  }
+}
+
+.d-relatedItems {
+  margin: 24px 30px 8px 30px;
+  font-size: 22px;
+  a {
+    text-decoration: none;
+    color: #3CCACE;
+  }
+}
+
+
+
+
+
+
+

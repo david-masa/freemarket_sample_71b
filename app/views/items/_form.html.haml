@@ -1,0 +1,62 @@
+.n__container
+  .n__logo
+    = link_to image_tag('material/logo/logo.png', :width => '170', :height => '60'), root_path
+      
+  .n__form__container
+    =form_for @item do |f|
+      %ul
+        .n__image__container
+          %p.message 商品出品画像（必須）
+          %p.message 最大5枚までアップロード出来ます
+          .post__drop__box__container
+            .prev-content
+            .label-content
+              %label{for: "item_images_attributes_0_src", class: "label-box", id: "label-box--0"}
+                %pre.label-box__text-visible クリックしてファイルをアップロード
+            .hidden-content
+              = f.fields_for :images do |i|
+                = i.file_field :src, class: "hidden-field"
+                %input{class:"hidden-field", type: "file", name: "item[images_attributes][1][src]", id: "item_images_attributes_1_src" }
+                %input{class:"hidden-field", type: "file", name: "item[images_attributes][2][src]", id: "item_images_attributes_2_src" }
+                %input{class:"hidden-field", type: "file", name: "item[images_attributes][3][src]", id: "item_images_attributes_3_src" }
+                %input{class:"hidden-field", type: "file", name: "item[images_attributes][4][src]", id: "item_images_attributes_4_src" }
+        .n__item__container
+          %p.message 商品名（必須）
+          = f.text_field :name, class: "name-box",  placeholder: "商品名（必須 40文字まで)"
+          %p.message 商品の説明（必須）
+          = f.text_area :detail, class: "detail-box", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）おじいちゃんの形見です。", rows: "5"
+        .n__details__container
+          %p.message 商品の詳細
+          %p.message カテゴリー（必須)
+          .sell-category-box
+            = f.collection_select :category_id, @category_parent_array, :id, :name, {prompt:"---", id: 'item_category_id'}, {class: "sell__item-category"}
+          %p.message ブランド（任意）
+          = f.text_field :brand, class: "select-box", placeholder: "例）アディダス"
+          %p.message 商品の状態（必須）
+          =f.select :condition_id, Item.condition_ids.keys, {prompt: "---"}, {class: "select-box"}
+        .n__post__container
+          %p.message 配送について
+          %p.message 配送量の負担（必須）
+          =f.select :shipping_cost, Item.shipping_costs.keys, {prompt: "---"}, {class: "select-box"}
+          %p.message 発送元の地域（必須）
+          = f.collection_select :shipping_area_id, ShippingArea.all, :id, :name, {}, {class: "select-box"}
+          %p.message 発送までの日数（必須）
+          =f.select :shipping_days, Item.shipping_days.keys, {prompt: "---"}, {class: "select-box"}
+        .n__price__container
+          %p.message 価格（¥300〜9,999,999）
+          .content-flex
+            .message 販売価格（必須）
+            .price
+              %span ¥
+              = f.text_field :price, class: "price-box"
+      .n__submit__container
+        .button
+          =f.submit "出品する", class: "exhibition"
+        .back
+          = link_to "もどる", root_path
+      .n__attention__container
+        %p.message 禁止されている行為および出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして加盟店規約に同意したことになります。
+  .n__end__logo__container
+    .n__end__logo__container__end__logo
+      = link_to image_tag('material/logo/logo.png', :width => '170', :height => '60'), root_path 
+      %p ©️FURIMA.inc 

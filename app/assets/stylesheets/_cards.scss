@@ -1,0 +1,182 @@
+.p-wrapper{
+  background-color: whitesmoke;
+  padding: 40px 0 40px 100px;
+  display: flex;
+  height: 1001px;
+  .p-sign_up_main{
+    background-color: #FFFFFF;
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    margin-left: 50px;
+    &_content{
+      font-size: 22px;
+      font-weight: bold;
+      padding: 32px;
+      line-height: 33px;
+      text-align: center;
+      border-bottom: #eee solid 1px;
+    }
+  }
+  .p-card_input{
+    height: 630px;
+    width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    &_form{
+      padding: 40px 40px 64px;
+      border-top: 1px solid #f5f5f5;
+      &_container{
+        max-width: 343px;
+        margin: 0 auto;
+        &_group{
+          margin: 0 0 40px;
+          &_label{
+            font-weight: 600;
+            &_span{
+              background: #ea352d;
+              margin: 0 0 0 8px;
+              padding: 2px 4px;
+              border-radius: 2px;
+              color: #fff;
+              font-size: 12px;
+              vertical-align: top;
+            }
+          }
+          &_input{
+            width: 100%;
+            margin: 8px 0 0;
+            height: 48px;
+            padding: 10px 16px 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: #fff;
+            line-height: 1.5;
+            font-size: 16px;
+          }
+          &_ul{
+            margin: 8px 0 0;
+            font-size: 0;
+            display: flex;
+            &_li{
+              margin-left: 8px;
+            }
+          }
+        }
+        &_group{
+          margin: 0 0 40px;
+          &_wrap{
+            &_half{
+              display: inline-block;
+              width: 45%;
+              margin: 8px 0 0;
+              position: relative;
+              background: #fff;
+              &_month{
+                width: calc(100% - 38px);
+                position: relative;
+                z-index: 2;
+                height: 48px;
+                padding: 0 16px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                background: 0;
+                font-size: 16px;
+                line-height: 1.5;
+                cursor: pointer;
+              }
+              &_year{
+                width: calc(100% - 38px);
+                position: relative;
+                z-index: 2;
+                height: 48px;
+                padding: 0 16px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                background: 0;
+                font-size: 16px;
+                line-height: 1.5;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        &_group{
+          margin: 0 0 40px;
+        }
+        &_submit{
+          background: #3ccAca;
+          border: 1px solid #3ccAca;
+          color: #fff;
+          width: 100%;
+          margin: 8px 0 0;
+          height: 48px;
+          padding: 10px 16px 8px;
+          line-height: 1.5;
+          font-size: 16px;
+          font-weight: 600;
+        }
+        &_back{
+          background: #3ccAca;
+          border: 1px solid #3ccAca;
+          color: #fff;
+          width: 100%;
+          margin: 8px 0 0;
+          height: 48px;
+          padding: 10px 16px 8px;
+          line-height: 1.5;
+          font-size: 16px;
+          display: block;
+          text-align: center;
+          text-decoration: none;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+.c-body{
+  height: 420px;
+  width: 700px;
+  background-color: #fff;
+  margin-left:50px;
+  &_container{
+    &_message{
+      font-size: 18px;
+      text-align: center;
+      padding: 12px 4%;
+      border-bottom: 1px solid #f5f5f5;
+      font-weight: bold;
+    }
+    &_inner{
+      max-width: 570px;
+      margin: 0 auto;
+      padding: 40px;
+      border-bottom: 1px solid #eee;
+      &_body{
+        max-width: 320px;
+        font-size: 16px;
+        margin: 0 auto;
+        font-weight: bold;
+        padding: 24px 0;
+        position: relative;
+        &_content{
+          max-width: 320px;
+          position: relative;
+          &_btn{
+            background: #3ccAca;
+            border: 1px solid #3ccAca;
+            color: #fff;
+            width: 100%;
+            margin: 40px 0 0;
+            height: 48px;
+            padding: 10px 16px 8px;
+            line-height: 1.5;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}

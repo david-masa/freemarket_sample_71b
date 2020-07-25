@@ -1,0 +1,122 @@
+.c__container {
+  background-color: #F8F8F8;
+  .c__container__logo {
+    padding-top: 30px;
+    margin:0 auto;
+    width: 170px;
+  }
+  .c__container__confirm {
+    background-color: #fff;
+    margin:20px auto;
+    width: 58%;
+    padding-top: 20px;
+    &__title {
+      padding-bottom: 20px;
+      border-bottom: solid 1px #eee;
+      .message {
+        margin-top: 10px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 25px;
+      }
+    }
+    &--upper {
+      padding-bottom: 5px;
+      border-bottom: solid 1px #eee;
+      &__flex__content {
+        display: flex;
+        width: 60%;
+        margin: 20px auto;
+        &__image {
+        }
+        &__list {
+          margin-left: 15px;
+          .item__name {
+          }
+          .item__price {
+            font-weight: bold;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+    &--row {
+      padding-bottom: 100px;
+      border-bottom: solid 1px #eee;
+      &__price {
+        width: 60%;
+        margin: 30px auto;
+        padding-bottom: 15px;
+        border-bottom: solid 1px #eee;
+        &--flex {
+          display: flex;
+          justify-content: space-between;
+          .message {
+            font-weight: bold;
+            font-size: 15px;
+          }
+          .price__box {
+            font-weight: bold;
+            font-size: 25px;
+          }
+        }
+      }
+      &__payment {
+        width: 60%;
+        margin: 20px auto;
+        padding-bottom: 15px;
+        border-bottom: solid 1px #eee;
+        .message {
+          font-weight: bold;
+          font-size: 15px;
+        }
+      }
+      &__address {
+        width: 60%;
+        margin: 20px auto;
+        padding-bottom: 15px;
+        border-bottom: solid 1px #eee;
+        .message {
+          font-weight: bold;
+        }
+        .address {
+          margin-top: 10px;
+        }
+      }
+      &__submit {
+        width: 60%;
+        margin: 20px auto;
+        text-align: center;
+        p {
+          font-size: 15px;
+          color: red;
+        }
+        .button {
+          margin-top: 15px;
+          width: 350px;
+          background-color:#3ccAce;
+          color: #fff;
+          height: 50px;
+          text-align: center;
+          font-size: 20px;
+          border-radius: 5px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .end__logo__container {
+    background-color: #F8F8F8;
+    height: 150px;
+    width: 100%;
+    &__end__logo {
+      padding-top: 25px;
+      width: 60%;
+      margin:0 auto;
+      width: 170px;
+      p {
+        text-align: center;
+      }
+    }
+  }
+}

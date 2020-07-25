@@ -1,0 +1,53 @@
+= render partial: 'layouts/header', locals: { header: @header }
+.u_body
+  .u_body_main
+    = render "users/side-bar"
+    .u_container
+      .u_profile 
+        .u_profile_box
+          = link_to "#", class: "u_profile_box_btn" do
+            = image_tag "member_photo_noimage_thumb.png",size: "180x180" 
+            %h2.u_profile_box_btn_name hoge
+            .u_profile_box_grade
+              %span.u_profile_box_grade-number 評価数 120
+              %span.u_profile_box_grade-amount 出品数 100
+// 以下は必須実装部分ではないので、必要に応じて適用する
+-# .u_detail
+-#   .u_detail_review-box
+-#     .u_detail_review-box_each
+-#       %i.fas.fa-laugh.u_detail_review-box_each_good_icon
+-#       .u_detail_review-box_each_good_number 100
+-#     .u_detail_review-box_each
+-#       %i.fas.fa-meh.u_detail_review-box_each_normal_icon
+-#       .u_detail_review-box_each_normal_number 20
+-#     .u_detail_review-box_each
+-#       %i.fas.fa-frown.u_detail_review-box_each_bad_icon
+-#       .u_detail_review-box_each_bad_number 0
+-# .u_sns
+-#   %ul.u_sns-box
+-#     %li.u_sns-box_facebook
+-#       = link_to "#", class:"u_sns-box_facebook_link" do
+-#         %i.fab.fa-facebook-square.u_sns-box_facebook_link_icon
+-#     %li.u_sns-box_twitter
+-#       = link_to "#", class:"u_sns-box_twitter_link" do
+-#         %i.fab.fa-twitter-square.u_sns-box_twitter_link_icon
+-#       %li.u_sns-box_line
+-#         = link_to "#", class:"u_sns-box_line_link" do
+-#           %i.fab.fa-line.u_sns-box_line_link_icon
+-# .u_item-box
+-#   %h2.u_item-box_user-name この出品者の商品
+-#   .u_item-box_container
+-#     .u_item-box_container_item
+-#       = link_to "#",class:".u_item-box_container_item_link" do
+-#         .u_item-box_container_item_link-box
+-#           = image_tag 'sample1.png', class: "first-Image"
+-#           .u_item-box_container_item_link_body
+-#             %h3.u_item-box_container_item_link_body-name
+-#               カメラ
+-#             .u_item-box_container_item_link_body_under
+-#               .u_item-box_container_item_link_body_under-price
+-#                 ￥1,000
+-#               .u_item-box_container_item_link_body_under-favorite
+-#                 %i.far.fa-heart.u_item-box_container_item_link_body_under-favorite_icon
+-#                 %span.u_item-box_container_item_link_body_under-favorite_number 12
+= render partial: 'top/footer', locals: { footer: @footer }

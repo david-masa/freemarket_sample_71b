@@ -1,0 +1,28 @@
+%header.pcHeader
+  .headerInner
+    .mainheader
+      %h1.icon
+        %span.image
+          = link_to root_path do
+            = image_tag "material/logo/logo.png", class: "image-logo"
+        .searchBox
+          %form{"accept-charset" => "UTF-8", action: "#", method: "get"}
+            %input{name: "utf8", type: "hidden", value: "✓"}/
+            %input#searchInput.searchBox--input{name: "key", placeholder: "キーワードから探す"}/
+            %button{type: "submit"}
+              %span.image
+                = image_tag "material/icon/icon-search 1.png", class: "image"
+              %input{name: "authenticity_token", type: "hidden"}/
+        %ul.resultLists
+      .nav
+        %ul.listsLeft
+          %li.listsLeft__item.listsLeft__item--first
+            = link_to "カテゴリー", "#", class: "catBtn"
+          %li.listsLeft__item
+            = link_to "ブランド", "#",class: "brandBtn"
+            %ul.brandsPulldown.displayNone
+        %ul.listsRight
+          %li.listsRight__item.listsRight__item--login
+            = link_to "ログイン", "#"
+          %li.listsRight__item.listsRight__item--new
+            = link_to "新規会員登録", "#"

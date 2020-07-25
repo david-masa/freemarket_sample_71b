@@ -1,0 +1,153 @@
+.d-header
+  =render partial: "layouts/header"
+.d-main
+  .d-showMain
+    .d-content
+      .d-itemBox
+        .d-itemBox__name
+          = @item.name
+        .d-itemBox__body
+          %ul
+            %li
+              = image_tag @item.images[0].src.url, class:"firstImage"
+              %ul
+                - @item.images.each do |image|
+                  %li
+                    = image_tag image.src.url, :width => "75", :height => "75",class:"imageList"
+
+        .d-itemBox__price
+          ¥
+          =@item.price
+          .d-itemBox__price-detail
+            %span (税込)
+            %span 送料込み
+        .d-itemDetail
+          .noticeMsg
+            %p
+
+            -# 商品紹介詳細を置く
+          .d-table
+            %table
+              %tbody
+                %tr
+                  %th 出品者
+
+                  %td
+                    = link_to @item.user.nickname, "/users/#{@item.user_id}"
+                %tr
+                  %th カテゴリー
+                  %td 
+                    =@item.category.name
+                %tr
+                  %th ブランド
+                  %td
+                    =@item.brand
+                %tr
+                  %th 商品の状態
+                  %td
+                    =@item.condition_id
+                %tr
+                  %th 配送料の負担
+                  %td
+                    =@item.shipping_cost
+                %tr
+                  %th 発送元の地域
+                  %td
+                    =@item.shipping_area.name
+                %tr
+                  %th 発送日の目安
+                  %td
+                    =@item.shipping_days
+          
+
+        .d-itemChangeBox
+          .d-itemChangeBox
+            %ul.d-itemChangeBox__btnList
+              -if @item.costomer.present?
+                %li.d-itemChangeBox__btnList__soldOutNotice
+                  売り切れました
+              -elsif user_signed_in? && current_user.id == @item.user_id
+                %li
+                  = button_to "商品の編集", edit_item_path(@item), id: "d-edit", method: :get
+                or
+                %li
+                  = button_to "この商品を削除する", item_path(@item), method: :delete, data: {confirm: "削除しますか？"}
+              -elsif user_signed_in? == false
+                = link_to new_user_session_path do
+                  %button.d-itemChangeBox__btnList__buyBtn
+                    ログインして購入する
+              -else
+                %li
+                  = link_to  item_purchase_index_path(@item.id) do
+                    %button.d-itemChangeBox__btnList__buyBtn
+                      購入画面に進む
+      %ur.d-links
+        %li 
+          - if @item.next.present?
+            = link_to item_path(@item.next) do
+              <
+              = @item.next.name
+        %li 
+          - if @item.previous.present?
+            = link_to item_path(@item.previous) do
+              = @item.previous.name
+              >
+      .d-relatedItems
+        -# =link_to "カテゴリをもっと見る"
+
+      %aside.appBanner
+        .inner
+          %h2.inner__title だれでもかんたん、人生を変えるフリマアプリ
+          %p.inner__text 今すぐ無料ダウンロード！
+          .inner__iconn
+            %span.image
+              = link_to "#" do
+                = image_tag "badge/appstore.png", class: "aBtn"
+            %span.image
+              = link_to "#" do
+                = image_tag "badge/googleplay.png", class: "gBtn"
+
+  .footer
+    %ul.contents_list
+      %li.content
+        %h2.content__head FURIMAについて
+        %ul
+          %li
+            = link_to "会社概要(運営会社)", "#"
+          %li
+            = link_to "プライバシーポリシー", "#"
+          %li
+            = link_to "FURIMA利用規約","#"
+          %li
+            = link_to "ポイントに関する特約", "#"
+      %li.content
+        %h2.content__head FURIMAを見る
+        %ul
+          %li
+            = link_to "カテゴリー一覧", "#"
+          %li
+            = link_to "ブランド一覧", "#" 
+      %li.content
+        %h2.content__head ヘルプ＆ガイド
+        %ul
+          %li
+            = link_to "FURIMAガイド", "#"
+          %li
+            = link_to "FURIMAロゴ利用ガイドライン", "#"
+          %li
+            = link_to "お知らせ", "#"
+    .footer__logo
+      %span.image
+        = image_tag "material/logo/logo-white.png", class: "footerLogo"
+    %p © FURIMA
+
+  .footer_camera
+    - if user_signed_in?
+      %li.footer_camera_btn
+        = link_to '出品する', new_item_path
+    - else
+      %li.footer_camera_btn
+        = link_to '出品する', new_user_session_path
+
+    %span
+      = image_tag "material/icon/icon_camera.png", class: "icon-camera"

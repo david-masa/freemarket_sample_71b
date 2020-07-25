@@ -1,0 +1,27 @@
+= render partial: 'layouts/header', locals: { header: @header }
+.e__center
+  .e__center__image
+    .e__center__image__content
+      %h2(class=".t__center__image__content-text")スマホで簡単！フリマアプリ
+      %h2.e__center__image__content-message
+        %p.e__center__image__content-message-line
+          FURIMAはだれでも簡単に出品・購入できる
+          %br
+          フリマアプリです
+      .e__center__image__content-icon
+        .e__center__image__content-icon-app
+        .e__center__image__content-icon-google
+          
+            
+.e__middle
+  .e__middle__title
+    %h1 新着アイテム一覧
+  .e__middle__container
+    
+  .e__middle__page
+    
+= render partial: 'layouts/footer', locals: { footer: @footer }
+%a(href="/items/new")
+  .sellBtn
+    %span.sellBtn__text 出品する
+    -# = image_tag 'icon_camera.png', alt: '', height: '', width: '', class: 'sellBtn__icon'

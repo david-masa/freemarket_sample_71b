@@ -1,0 +1,55 @@
+.r-single
+  %header.r-header
+    =render partial: "layouts/header"
+  %main.r-single-main
+    %section.r-single-container
+      %h2.r-single-header 住所情報登録
+      = form_for @address do |f|
+        = render "devise/shared/error_messages", resource: @address
+        .r-sigle-content
+          .field
+            = f.label :お名前
+            %span 必須
+            %br/
+            = f.text_field :family_name, autofocus: true, autocomplete: "family_name", class: "input-halftag" ,placeholder: "例）佐藤"
+            = f.text_field :first_name, autofocus: true, class: "input-halftag",placeholder: "例）太郎"
+          .field
+            = f.label:お名前カナ
+            %span 必須
+            %br/
+            = f.text_field :family_name_kana, autofocus: true, class: "input-halftag",placeholder: "フリマ(全角カナ)"
+            = f.text_field :first_name_kana, autofocus: true, class: "input-halftag",placeholder: "例 タロウ(全角カナ)"
+          .field
+            = f.label :郵便番号
+            %span 必須
+            %br/
+            = f.text_field :postal_code, autofocus: true, class: "input-tag",placeholder: "ハイフン付き、半角の数字7文字入力"
+          .field
+            = f.label :都道府県
+            %span 必須
+            %br/
+            = f.select :city, Address.cities.keys, {}, {class: 'input-tag'}
+          .field
+            = f.label :市町村
+            %span 必須
+            %br/
+            = f.text_field :local, autofocus: true, class: "input-tag",placeholder: "例 横浜市緑区"
+          .field
+            = f.label :番地
+            %span 必須
+            %br/
+            = f.text_field :block, autofocus: true, class: "input-tag",placeholder: "例 青山1-1-1"
+          .field
+            = f.label :マンション名
+            %div 任意
+            -# %br/
+            = f.text_field :building, autofocus: true, class: "input-tag",placeholder: "例 柳ビル103"
+          .field
+            = f.label :連絡先
+            %div 任意
+            -# %br/
+            = f.text_field :number, autofocus: true, class: "input-tag",placeholder: "ハイフン無し 数字のみ入力"
+
+        .actions
+          = f.submit "登録",class: "next-btn"
+       

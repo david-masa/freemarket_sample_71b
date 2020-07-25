@@ -1,0 +1,91 @@
+.r-single
+  %header.r-header
+    =render partial: "layouts/header"
+  %main.r-single-main
+    %section.r-single-container
+      %h2.r-single-header 会員情報登録
+
+      = form_for(@user, url: user_registration_path) do |f|
+        = render "devise/shared/error_messages", resource: @user
+        .r-sigle-content
+          .field
+            = f.label :ニックネーム
+            %span 必須
+            %br/
+            = f.text_field :nickname, autofocus: true, autocomplete: "nickname", class:"input-tag", placeholder:"例：フリマ"
+
+
+          .field
+            = f.label :メールアドレス
+            %span 必須
+            %br/
+            = f.email_field :email, autofocus: true, autocomplete: "email", class:"input-tag", placeholder:"例：xxx@mail.com"
+
+
+          .field
+            = f.label :パスワード（7文字以上）
+            - if @minimum_password_length
+              
+              %span.pas 必須  
+            %br/
+            = f.password_field :password, autocomplete: "new-password", class:"input-tag", placeholder:"例：xxxxxxx"
+            .field
+              = f.label :パスワード確認（7文字以上）
+              
+              %span.pasw 必須 
+              %br/
+              = f.password_field :password_confirmation, autocomplete: "new-password", class:"input-tag", placeholder:"例：xxxxxxx"
+
+
+
+          .field
+            = f.label :"名前" 
+            %span 必須
+            %br/
+            = f.text_field :last_name, autofocus: true, autocomplete: "last_name", class:"input-halftag", placeholder:"例：佐藤"
+            = f.text_field :first_name, autofocus: true, autocomplete:  "first_name", class:"input-halftag", placeholder:"例：太郎"
+
+
+          .field
+            = f.label :"カナ"
+            %span 必須
+            %br/
+            = f.text_field :last_name_kana, autofocus: true, autocomplete: "last_name_kana", class:"input-halftag" , placeholder:"フリマ(全角カナ)"
+            = f.text_field :first_name_kana, autofocus: true, autocomplete: "first_name_kana", class:"input-halftag", placeholder:"例 タロウ(全角カナ)"
+
+          .field
+            = f.label "生年月日"
+            %span 必須
+            %br/
+            .field__birthday
+              -# = f.date_select :year, { use_month_numbers: true, start_year: 1930, end_year: Time.now.year - 10, default: Date.new(1989, 1, 1)}, {class:"field__birthday--box"}
+              -# %span 年
+              = raw sprintf( f.date_select(:year, {use_month_numbers: true, start_year: 1930, end_year: (Time.now.year - 10), default: Date.new(1989, 1, 1), with_css_classe: true, date_separator: '%s'}), '年 ', '月 ') + '日'
+              
+
+          .field
+            = f.label :電話番号
+            %span 必須
+            %br/
+            = f.text_field :telnum, autofocus: true, autocomplete: "telnum", class:"input-tag", type:"tel", placeholder:"半角ハイフン付きで入力して下さい"
+
+          .field
+            = f.label "性別"
+            %span 必須
+            %br/
+            = f.radio_button :gender, 1 
+            男性
+            = f.radio_button :gender, 2
+            女性
+           
+
+          .actions
+            = f.submit "住所登録画面へ",class: "next-btn"
+
+
+
+
+
+
+         
+          

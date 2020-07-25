@@ -1,0 +1,1805 @@
+@charset "UTF-8";
+/*!
+ * YUI 3.5.0 - reset.css (http://developer.yahoo.com/yui/3/cssreset/)
+ * http://cssreset.com
+ * Copyright 2012 Yahoo! Inc. All rights reserved.
+ * http://yuilibrary.com/license/
+ */
+/*
+    TODO will need to remove settings on HTML since we can't namespace it.
+    TODO with the prefix, should I group by selector or property for weight savings?
+*/
+/* line 11, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/_reset.scss */
+html {
+  color: #000;
+  background: #FFF;
+}
+
+/*
+  TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+  TODO test putting a class on HEAD.
+      - Fails on FF.
+*/
+/* line 22, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/_reset.scss */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 50, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 54, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/_reset.scss */
+fieldset,
+img {
+  border: 0;
+}
+
+/*
+  TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+/* line 61, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/_reset.scss */
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* line 74, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/_reset.scss */
+ol,
+ul {
+  list-style: none;
+}
+
+/* line 79, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/_reset.scss */
+caption,
+th {
+  text-align: left;
+}
+
+/* line 83, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/_reset.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+/* line 92, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/_reset.scss */
+q:before,
+q:after {
+  content: '';
+}
+
+/* line 96, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/_reset.scss */
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+/* to preserve line-height and selector appearance */
+/* line 102, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/_reset.scss */
+sup {
+  vertical-align: text-top;
+}
+
+/* line 105, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/_reset.scss */
+sub {
+  vertical-align: text-bottom;
+}
+
+/* line 108, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/_reset.scss */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*to enable resizing for IE*/
+/* line 116, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/_reset.scss */
+input,
+textarea,
+select {
+  *font-size: 100%;
+}
+
+/*because legend doesn't inherit in IE */
+/* line 122, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/_reset.scss */
+legend {
+  color: #000;
+}
+
+/* YUI CSS Detection Stamp */
+/* line 126, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/_reset.scss */
+#yui3-css-stamp.cssreset {
+  display: none;
+}
+
+/* line 1, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-header {
+  background-color: #f8f8f8;
+  width: 100vw;
+  height: 100px;
+}
+
+/* line 7, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-main {
+  width: 100vw;
+  height: 100%;
+  background-color: #f8f8f8;
+}
+
+/* line 13, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-showMain {
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* line 20, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-content {
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #f8f8f8;
+  border-top: 1px solid #eee;
+  border-bottom: 2px solid #eee;
+  margin: auto;
+  padding-left: 80px;
+  background: #FFF;
+}
+
+/* line 36, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox {
+  padding: 24px 40px 40px;
+  background-color: #ffffff;
+}
+/* line 39, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox__price {
+  font-weight: bold;
+}
+/* line 42, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox__name {
+  font-size: 24px;
+  text-align: center;
+}
+/* line 47, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox__body {
+  margin: 16px 0 0;
+}
+/* line 50, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox__body ul li {
+  display: flex;
+  width: 560px;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: column;
+}
+/* line 56, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox__body ul li img {
+  width: 100%;
+  object-fit: cover;
+  height: 346px;
+}
+/* line 61, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox__body ul li ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+/* line 65, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox__body ul li ul li {
+  width: 25%;
+  margin: 0 10px 0 0;
+}
+/* line 68, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox__body ul li ul li img {
+  object-fit: cover;
+  height: 87px;
+}
+/* line 78, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox__price {
+  margin: 24px 0 24px;
+  font-size: 46px;
+  text-align: center;
+}
+/* line 84, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox__price-detail {
+  font-size: 16px;
+}
+/* line 88, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox .d-itemDetail {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+/* line 93, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox .d-table {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+/* line 96, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox .d-table table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+/* line 101, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox .d-table table tbody tr {
+  border: 1px solid #dedede;
+}
+/* line 103, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox .d-table table tbody tr th {
+  background-color: #EEEEEE;
+  width: 135px;
+  padding: 8px;
+  text-align: center;
+}
+/* line 109, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox .d-table table tbody tr td {
+  padding: 15px;
+}
+/* line 116, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox .d-optonalArea {
+  display: flex;
+  justify-content: space-between;
+}
+/* line 121, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox .d-optonalArea ul .d-likeBtn {
+  color: #3CCACE;
+  font-size: 16px;
+  border: 1px solid #ffb340;
+  padding: 6px 10px;
+  border-radius: 40px;
+}
+/* line 129, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox .d-optonalArea .d-optional {
+  margin: 10px 0 0;
+}
+/* line 131, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox .d-optonalArea .d-optional li {
+  font-size: 14px;
+}
+/* line 133, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-itemBox .d-optonalArea .d-optional li a {
+  padding: 6px 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  display: inline-block;
+}
+
+/* line 146, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-optionalBtn:hover {
+  opacity: 0.5;
+}
+
+/* line 149, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-likeBtn:hover {
+  opacity: 0.5;
+}
+
+/* line 155, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-commentBox {
+  margin: 10px 0;
+  padding: 24px;
+  text-align: center;
+  background-color: #ffffff;
+}
+/* line 161, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-commentBox textarea {
+  width: 100%;
+  height: 104px;
+}
+/* line 166, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-commentBox p {
+  font-size: 14px;
+  text-align: left;
+}
+/* line 171, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-commentBox .d-noticeMsg {
+  padding: 8px;
+  margin: 10px 0;
+  background-color: #f8f8f8;
+}
+/* line 176, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-commentBox .d-commentBtn {
+  background: #3CCACE;
+  line-height: 48px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 100px;
+  width: 60%;
+  border: 1px solid #3CCACE;
+}
+
+/* line 187, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-links {
+  font-size: 16px;
+  list-style: none;
+}
+/* line 191, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-links li {
+  display: inline;
+}
+/* line 193, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-links li a {
+  color: #3CCACE;
+  text-decoration: none;
+}
+/* line 198, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-links li:last-child {
+  float: right;
+}
+
+/* line 203, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-relatedItems {
+  margin: 24px 30px 8px 30px;
+  font-size: 22px;
+}
+/* line 206, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/posts.scss */
+.d-relatedItems a {
+  text-decoration: none;
+  color: #3CCACE;
+}
+
+/* line 1, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 4, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader {
+  padding: 0 60px;
+  height: 110px;
+}
+/* line 7, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner {
+  max-width: 1040px;
+  width: 100%;
+  min-height: 82px;
+  margin: 0 auto;
+}
+/* line 12, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .mainheader {
+  position: relative;
+  align-items: center;
+  height: 60px;
+  padding-top: 20px;
+}
+/* line 17, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .mainheader .icon {
+  padding-bottom: 10px;
+  margin-right: 30px;
+  border-radius: 4px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+/* line 24, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .mainheader .icon .image {
+  width: 140px;
+  display: block;
+  margin-right: 30px;
+}
+/* line 28, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .mainheader .icon .image .image-logo {
+  width: 140px;
+  vertical-align: bottom;
+}
+/* line 34, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .mainheader .searchBox {
+  margin-left: auto;
+  width: 100%;
+}
+/* line 37, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .mainheader .searchBox form {
+  width: 100%;
+  display: flex;
+  margin-bottom: 5px;
+}
+/* line 41, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .mainheader .searchBox form .utf8 {
+  width: calc(100% - 26px);
+  height: 36px;
+  padding: 0 0 0 5px;
+}
+/* line 46, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .mainheader .searchBox form .searchBox {
+  width: calc(100% - 26px);
+  height: 36px;
+  padding: 0 0 0 5px;
+}
+/* line 51, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .mainheader .searchBox form button {
+  width: 36px;
+  border: 0;
+  cursor: pointer;
+  background-color: #3CCACE;
+  padding: 8px;
+}
+/* line 57, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .mainheader .searchBox form button .image {
+  width: 100%;
+  vertical-align: bottom;
+}
+/* line 62, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .mainheader .searchBox form input {
+  width: calc(100% - 26px);
+  height: 36px;
+  padding: 0 0 0 5px;
+}
+/* line 69, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .mainheader .resultLists {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 36px;
+  z-index: 2;
+  padding-inline-start: 0px;
+}
+/* line 78, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .nav {
+  font-size: 14px;
+  display: flex;
+  margin-bottom: 10px;
+  margin-bottom: 20px;
+  height: 40px;
+}
+/* line 84, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .nav .listsLeft {
+  position: relative;
+  display: flex;
+}
+/* line 87, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .nav .listsLeft__item {
+  list-style: none;
+  padding: 0;
+}
+/* line 90, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .nav .listsLeft__item .catBtn {
+  background-image: image-url("icon_category.svg");
+  color: #333;
+  text-decoration: none;
+  line-height: 32px;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  padding-right: 30px;
+}
+/* line 100, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .nav .listsLeft__item .tree.displayNone {
+  z-index: 2;
+  position: absolute;
+  background-color: #fff;
+  width: 240px;
+  top: 40px;
+  display: none;
+}
+/* line 107, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .nav .listsLeft__item .tree.displayNone .categoryTree {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+/* line 112, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .nav .listsLeft__item .tree.displayNone .categoryTree .categoryTree--item {
+  position: relative;
+}
+/* line 114, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .nav .listsLeft__item .tree.displayNone .categoryTree .categoryTree--item a {
+  color: #333;
+  text-decoration: none;
+  line-height: 32px;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  padding-right: 30px;
+}
+/* line 128, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .nav .listsLeft {
+  display: flex;
+  line-height: 38px;
+  padding: 0 0 0 16px;
+}
+/* line 132, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .nav .listsLeft .brandBtn {
+  color: #333;
+  text-decoration: none;
+  list-style: none;
+  line-height: 32px;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  padding-right: 30px;
+}
+/* line 142, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .nav .listsLeft .brandsPulldown {
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+}
+/* line 148, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .nav .listsRight {
+  margin-left: auto;
+  display: flex;
+  list-style: none;
+  padding-inline-start: 0px;
+}
+/* line 153, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .nav .listsRight .listsRight__item {
+  color: #333;
+  line-height: 38px;
+  padding: 0 0 0 16px;
+}
+/* line 157, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .nav .listsRight .listsRight__item a {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  line-height: 32px;
+}
+/* line 165, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .nav .listsRight .listsRight__item {
+  color: #333;
+  line-height: 38px;
+  padding: 0 0 0 16px;
+}
+/* line 169, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.pcHeader .headerInner .nav .listsRight .listsRight__item .a {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  line-height: 32px;
+}
+
+/* line 182, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents {
+  font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
+  height: 100vh;
+  width: 100%;
+}
+/* line 186, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents ul {
+  list-style: none;
+}
+/* line 190, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_one {
+  height: 560px;
+  width: 100%;
+  background-image: url(material/pict/bg-mainVisual-pict_pc.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  padding: 0 60px;
+}
+/* line 198, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_one_common {
+  position: absolute;
+  top: 230px;
+  left: 50px;
+}
+/* line 202, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_one_common_title {
+  font-size: 60px;
+  color: white;
+  top: 210px;
+  left: 70px;
+  text-shadow: 1px 1px 5px #808080;
+}
+/* line 208, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_one_common_list {
+  font-size: 18px;
+  color: white;
+  text-shadow: 1px 1px 5px #808080;
+  list-style: none;
+  line-height: 30px;
+  margin-top: 16px;
+}
+/* line 216, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_one_common .inner__icon {
+  width: 100%;
+  display: flex;
+  margin: auto 0;
+  margin-top: 24px;
+}
+/* line 221, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_one_common .inner__icon .aBtn {
+  width: 180px;
+  padding-top: 0px;
+  height: 54px;
+  vertical-align: bottom;
+  margin: 5px;
+}
+/* line 228, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_one_common .inner__icon .gBtn {
+  width: 180px;
+  vertical-align: bottom;
+  margin: 5px;
+}
+/* line 236, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_two {
+  height: 660px;
+  width: 100%;
+  background-color: pink;
+}
+/* line 240, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_two_title {
+  height: 150px;
+  background-color: white;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 247, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_two_title_feature {
+  font-size: 25px;
+  color: #333;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1em;
+  padding-top: 30px;
+  font-weight: bold;
+}
+/* line 256, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_two_title h2:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  display: inline-block;
+  width: 70px;
+  height: 4px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #3CCACE;
+}
+/* line 269, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_two_image {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+/* line 273, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_two_image span {
+  color: #3CCACE;
+}
+/* line 276, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_two_image_left {
+  position: relative;
+  height: 600px;
+}
+/* line 279, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_two_image_left_one {
+  height: 50px;
+  width: 50px;
+  background-color: #3CCACE;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+}
+/* line 290, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_two_image_left_article {
+  height: 80px;
+  width: 300px;
+  font-size: 25px;
+  line-height: 80px;
+  text-align: center;
+  font-weight: bold;
+}
+/* line 298, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_two_image_left_note {
+  width: 300px;
+  font-size: 17px;
+  line-height: 25px;
+}
+/* line 304, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_two_image_center {
+  margin: 0 50px 0;
+  position: relative;
+}
+  .img {
+   width: 300;
+   height: 300;
+  }
+/* line 307, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_two_image_center_two {
+  height: 50px;
+  width: 50px;
+  background-color: #3CCACE;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+}
+/* line 318, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_two_image_center_article {
+  height: 80px;
+  width: 300px;
+  font-size: 25px;
+  line-height: 80px;
+  text-align: center;
+  font-weight: bold;
+}
+/* line 326, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_two_image_center_note {
+  width: 300px;
+  font-size: 17px;
+  line-height: 25px;
+}
+/* line 332, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_two_image_right {
+  position: relative;
+}
+/* line 334, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_two_image_right_three {
+  height: 50px;
+  width: 50px;
+  background-color: #3CCACE;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+}
+/* line 345, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_two_image_right_article {
+  height: 80px;
+  width: 300px;
+  font-size: 25px;
+  line-height: 80px;
+  text-align: center;
+  font-weight: bold;
+}
+/* line 353, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_two_image_right_note {
+  width: 300px;
+  font-size: 17px;
+  line-height: 25px;
+  text-align: center;
+}
+/* line 362, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_three {
+  height: 400px;
+  width: 100%;
+  background-image: url(material/pict/bg-topMiddleDl-pict);
+  background-size: cover;
+  background-position: bottom center;
+  position: relative;
+}
+/* line 369, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_three_common {
+  position: absolute;
+  left: 50px;
+  top: 100px;
+}
+/* line 374, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_three_common_title {
+  font-size: 25px;
+  color: white;
+  text-shadow: 1px 1px 5px #808080;
+}
+/* line 379, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_three_common_list {
+  font-size: 18px;
+  color: white;
+  text-shadow: 1px 1px 5px #808080;
+  list-style: none;
+  line-height: 30px;
+  margin: 20px 0 30px;
+}
+/* line 388, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_three_common_btn .inner__icon {
+  width: 100%;
+  display: flex;
+  margin: auto 0;
+}
+/* line 392, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_three_common_btn .inner__icon .aBtn {
+  width: 180px;
+  padding-top: 0px;
+  height: 54px;
+  vertical-align: bottom;
+  margin: 5px;
+}
+/* line 399, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_three_common_btn .inner__icon .gBtn {
+  width: 180px;
+  vertical-align: bottom;
+  margin: 5px;
+}
+/* line 408, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_four {
+  height: 660px;
+  width: 100%;
+}
+/* line 411, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_four_title {
+  height: 150px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 417, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_four_title_feature {
+  font-size: 25px;
+  color: #333;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1em;
+  padding-top: 30px;
+  font-weight: bold;
+}
+/* line 426, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_four_title h2:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  display: inline-block;
+  width: 70px;
+  height: 4px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #3CCACE;
+}
+/* line 439, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_four_image {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+/* line 443, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_four_image img {
+  margin: 0 40px;
+}
+/* line 446, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_four_image_left {
+  position: relative;
+  height: 100% px;
+}
+/* line 449, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_four_image_left_one {
+  height: 50px;
+  width: 50px;
+  background-color: #3CCACE;
+  color: #fff;
+  line-height: 50px;
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+}
+/* line 459, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_four_image_left_article {
+  height: 80px;
+  width: 300px;
+  font-size: 19px;
+  line-height: 80px;
+  text-align: center;
+  font-weight: bold;
+}
+/* line 467, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_four_image_left_note {
+  width: 300px;
+  font-size: 17px;
+  line-height: 25px;
+}
+/* line 473, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_four_image_center {
+  margin: 0 50px 0;
+  position: relative;
+}
+/* line 476, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_four_image_center_two {
+  height: 50px;
+  width: 50px;
+  background-color: #3CCACE;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+}
+/* line 487, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_four_image_center_article {
+  height: 80px;
+  width: 300px;
+  font-size: 17px;
+  line-height: 80px;
+  text-align: center;
+  font-weight: bold;
+}
+/* line 495, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_four_image_center_note {
+  width: 300px;
+  font-size: 17px;
+  line-height: 25px;
+}
+/* line 501, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_four_image_right {
+  position: relative;
+}
+/* line 503, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_four_image_right_three {
+  height: 50px;
+  width: 50px;
+  background-color: #3CCACE;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+}
+/* line 514, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_four_image_right_article {
+  height: 80px;
+  width: 300px;
+  font-size: 17px;
+  line-height: 80px;
+  text-align: center;
+  font-weight: bold;
+}
+/* line 522, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents__box_four_image_right_note {
+  width: 300px;
+  font-size: 17px;
+  line-height: 25px;
+  text-align: center;
+}
+/* line 532, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__category {
+  height: 550px;
+  background-color: #F8F8F8;
+  padding-top: 40px;
+}
+/* line 536, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__category_box {
+  height: 150px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 542, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__category_box_section {
+  line-height: 40px;
+}
+/* line 544, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__category_box_section_title {
+  font-size: 28px;
+  font-weight: bold;
+}
+/* line 548, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__category_box_section_link {
+  text-align: center;
+}
+/* line 550, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__category_box_section_link a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #3CCACE;
+  font-weight: bold;
+}
+/* line 559, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__category_post {
+  width: 100%;
+  display: flex;
+  height: 250px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/* line 565, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__category_post_box {
+  height: 250px;
+  width: 220px;
+  margin-right: 40px;
+}
+/* line 569, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__category_post_box_iamge {
+  height: 150px;
+  width: 220px;
+  background-color: #fff;
+}
+/* line 574, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__category_post_box_article {
+  height: 100px;
+  width: 220px;
+  background-color: #fff;
+  line-height: 25px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 15px;
+}
+/* line 584, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__category_post_box_article_detail_tax {
+  font-size: 10px;
+  color: #808080;
+}
+/* line 589, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__category_post_box_article_star {
+  display: flex;
+  justify-content: space-between;
+  line-height: 75px;
+}
+/* line 593, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__category_post_box_article_star_namber {
+  margin-left: 5px;
+}
+/* line 602, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__brand {
+  height: 550px;
+  background-color: #F8F8F8;
+  padding-top: 40px;
+}
+/* line 606, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__brand_box {
+  height: 150px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 612, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__brand_box_section {
+  line-height: 40px;
+}
+/* line 614, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__brand_box_section_title {
+  font-size: 28px;
+}
+/* line 617, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__brand_box_section_link {
+  text-align: center;
+}
+/* line 619, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__brand_box_section_link a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #3CCACE;
+  font-weight: bold;
+}
+/* line 628, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__brand_post {
+  width: 100%;
+  display: flex;
+  height: 250px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/* line 634, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__brand_post_box {
+  height: 250px;
+  width: 220px;
+  margin-right: 40px;
+}
+/* line 638, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__brand_post_box_iamge {
+  height: 150px;
+  width: 220px;
+  background-color: #fff;
+}
+/* line 643, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__brand_post_box_article {
+  height: 100px;
+  width: 220px;
+  background-color: #fff;
+  line-height: 25px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 15px;
+}
+/* line 653, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__brand_post_box_article_detail_tax {
+  font-size: 10px;
+  color: #808080;
+}
+/* line 658, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__brand_post_box_article_star {
+  display: flex;
+  justify-content: space-between;
+  line-height: 75px;
+}
+/* line 662, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.contents .contents__brand_post_box_article_star_namber {
+  margin-left: 5px;
+}
+
+/* line 673, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.appBanner {
+  background-image: image-url("material/pict/bg-appBanner-pict.jpg");
+  padding: 60px 40px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 359px;
+}
+/* line 680, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.appBanner .inner {
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+/* line 684, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.appBanner .inner__title {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+/* line 690, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.appBanner .inner__text {
+  font-size: 35px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+/* line 694, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.appBanner .inner .inner__iconn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: auto 0;
+}
+/* line 699, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.appBanner .inner .inner__iconn .aBtn {
+  width: 180px;
+  padding-top: 0px;
+  height: 54px;
+  vertical-align: bottom;
+  margin: 5px;
+}
+/* line 706, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.appBanner .inner .inner__iconn .gBtn {
+  width: 180px;
+  vertical-align: bottom;
+  margin: 5px;
+}
+
+/* line 714, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer {
+  padding: 60px 0;
+  color: #fff;
+  background-color: #272727;
+  text-align: center;
+  height: 354px;
+}
+/* line 720, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer .contents_list {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+}
+/* line 724, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer .contents_list .content {
+  display: flex;
+  flex-direction: column;
+  width: calc(1 / 3 * 100%);
+  margin: 0 2% 0 0;
+}
+/* line 729, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer .contents_list .content__head {
+  margin: 0 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+/* line 734, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer .contents_list .content ul {
+  list-style: none;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 32px;
+  padding-inline-start: 0;
+}
+/* line 741, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer .contents_list .content ul li {
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 32px;
+}
+/* line 746, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer .contents_list .content ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 32px;
+}
+/* line 755, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer .contents_list .content {
+  display: flex;
+  flex-direction: column;
+  width: calc(1 / 3 * 100%);
+  margin: 0 2% 0 0;
+}
+/* line 760, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer .contents_list .content__head {
+  margin: 0 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+/* line 765, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer .contents_list .content ul {
+  list-style: none;
+}
+/* line 767, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer .contents_list .content ul li {
+  list-style: none;
+}
+/* line 769, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer .contents_list .content ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 32px;
+}
+/* line 778, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer .contents_list .content {
+  display: flex;
+  flex-direction: column;
+  width: calc(1 / 3 * 100%);
+  margin: 0 2% 0 0;
+}
+/* line 783, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer .contents_list .content__head {
+  margin: 0 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+/* line 788, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer .contents_list .content ul {
+  list-style: none;
+}
+/* line 790, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer .contents_list .content ul li {
+  list-style: none;
+}
+/* line 792, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer .contents_list .content ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 32px;
+}
+/* line 802, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer__logo {
+  max-width: 160px;
+  width: 100%;
+  margin: 0 auto;
+}
+/* line 806, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer__logo .footerLogo {
+  width: 160px;
+  height: 50px;
+}
+
+/* line 812, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer_camera {
+  background-color: #3ccace;
+  height: 116px;
+  width: 120px;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  border-radius: 4%;
+  text-align: center;
+}
+/* line 821, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer_camera_btn {
+  color: #ffffff;
+  font-size: 18px;
+  margin: 15px 0 5px;
+}
+/* line 826, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer_camera_btn a {
+  text-decoration: none;
+  color: white;
+}
+/* line 831, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/top.scss */
+.footer_camera .icon-camera {
+  height: 54px;
+  width: 54px;
+}
+
+/* line 1, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 5, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.login-contena {
+  background-color: whitesmoke;
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  overflow: scroll;
+  overflow: hidden visible;
+  font-size: 13px;
+}
+/* line 14, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.login-contena .header {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 21, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.login-contena .header .header-logo {
+  height: 50px;
+  width: 200px;
+}
+/* line 24, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.login-contena .header .header-logo img {
+  height: 50px;
+  width: 100%;
+}
+/* line 31, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.login-contena .login-contents {
+  display: flex;
+  justify-content: center;
+}
+/* line 35, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.login-contena .login-contents .login-panel {
+  background-color: white;
+  height: 500px;
+  width: 450px;
+}
+/* line 40, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.login-contena .login-contents .login-panel .new-account {
+  height: 140px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 0.5px lightgray;
+}
+/* line 47, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.login-contena .login-contents .login-panel .new-account .no-account-box {
+  text-align: center;
+}
+/* line 49, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.login-contena .login-contents .login-panel .new-account .no-account-box .txt {
+  font-size: small;
+}
+/* line 52, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.login-contena .login-contents .login-panel .new-account .no-account-box .new-account {
+  height: 40px;
+  width: 300px;
+  background-color: #0099e8;
+  margin: 4px 0;
+}
+/* line 57, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.login-contena .login-contents .login-panel .new-account .no-account-box .new-account a {
+  text-decoration: none;
+  color: white;
+}
+/* line 64, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.login-contena .login-contents .login-panel .login-account {
+  height: 140px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 40px;
+  margin-bottom: 15px;
+}
+/* line 74, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.login-contena .login-contents .login-panel .login-account .list-box {
+  text-align: center;
+}
+/* line 77, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.login-contena .login-contents .login-panel .login-account .list-box .facebook-login {
+  height: 40px;
+  width: 300px;
+  background-color: #385185;
+  line-height: 40px;
+}
+/* line 82, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.login-contena .login-contents .login-panel .login-account .list-box .facebook-login a {
+  text-decoration: none;
+  color: white;
+}
+/* line 89, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.login-contena .login-contents .login-panel .login-account .list-box .google-login {
+  height: 40px;
+  width: 300px;
+  border: solid 1px gray;
+  margin-top: 16px;
+  line-height: 40px;
+}
+/* line 95, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.login-contena .login-contents .login-panel .login-account .list-box .google-login a {
+  text-decoration: none;
+  color: black;
+}
+
+/* line 107, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.address-login-form-inner {
+  text-align: center;
+}
+
+/* line 111, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.mailadress {
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  margin: auto;
+  border: solid 1px gray;
+  margin-bottom: 15px;
+}
+
+/* line 120, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.password {
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  margin: auto;
+  border: solid 1px gray;
+  margin-bottom: 15px;
+}
+
+/* line 129, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.under-login-box {
+  width: 300px;
+  height: 40px;
+  background-color: red;
+  text-align: center;
+  margin: auto;
+  border: solid 1px gray;
+  line-height: 40px;
+}
+/* line 137, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.under-login-box a {
+  text-decoration: none;
+}
+
+/* line 142, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.logo-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+/* line 146, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/log.scss */
+.logo-footer__contents {
+  text-align: center;
+}
+
+/* line 1, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container {
+  background-color: #f8f8f8;
+}
+/* line 3, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__logo {
+  padding-top: 30px;
+  margin: 0 auto;
+  width: 170px;
+}
+/* line 8, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container {
+  background-color: #fff;
+  margin: 30px auto;
+  width: 58%;
+  padding-top: 20px;
+}
+/* line 13, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__image__container {
+  padding-bottom: 20px;
+  border-bottom: solid 1px #eee;
+}
+/* line 16, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__image__container .message {
+  margin-top: 15px;
+  margin-left: 25px;
+}
+/* line 20, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__image__container .post__drop__box__container {
+  display: block;
+  margin: 16px 18px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* line 25, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__image__container .post__drop__box__container .prev-content {
+  display: flex;
+}
+/* line 27, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__image__container .post__drop__box__container .prev-content .preview-box {
+  height: 162px;
+  width: 120px;
+  margin: 0 15px 10px 0;
+}
+/* line 31, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__image__container .post__drop__box__container .prev-content .preview-box .upper-box {
+  height: 112px;
+  width: 100%;
+}
+/* line 34, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__image__container .post__drop__box__container .prev-content .preview-box .upper-box img {
+  width: 120px;
+  height: 112px;
+}
+/* line 39, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__image__container .post__drop__box__container .prev-content .preview-box .lower-box {
+  display: flex;
+  text-align: center;
+}
+/* line 42, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__image__container .post__drop__box__container .prev-content .preview-box .lower-box .update-box {
+  color: #00b0ff;
+  width: 50%;
+  height: 50%;
+  line-height: 50px;
+  border: 1px solid #eee;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+/* line 51, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__image__container .post__drop__box__container .prev-content .preview-box .lower-box .delete-box {
+  color: #00b0ff;
+  width: 100%;
+  height: 50%;
+  line-height: 50px;
+  border: 1px solid #eee;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+/* line 63, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__image__container .post__drop__box__container .label-content {
+  margin-bottom: 10px;
+  width: 770px;
+}
+/* line 66, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__image__container .post__drop__box__container .label-content .label-box {
+  display: block;
+  border: 1px dashed #ccc;
+  position: relative;
+  background: #f5f5f5;
+  width: 100%;
+  height: 162px;
+  cursor: pointer;
+}
+/* line 74, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__image__container .post__drop__box__container .label-content .label-box__text-visible {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  right: 16px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: bold;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  pointer-events: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+/* line 92, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__image__container .post__drop__box__container .hidden-content .hidden-field {
+  display: none;
+}
+/* line 95, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__image__container .post__drop__box__container .hidden-content .hidden-checkbox {
+  display: none;
+}
+/* line 101, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__item__container {
+  margin-top: 30px;
+  padding-bottom: 50px;
+  border-bottom: solid 1px #eee;
+}
+/* line 105, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__item__container .message {
+  margin-top: 20px;
+  margin-left: 25px;
+}
+/* line 109, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__item__container .name-box {
+  width: 95%;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 25px;
+  padding: 5px;
+}
+/* line 116, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__item__container .description-box {
+  width: 95%;
+  height: 120px;
+  margin-top: 10px;
+  margin-left: 25px;
+  padding: 5px;
+}
+/* line 124, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__details__container {
+  margin-top: 30px;
+  padding-bottom: 50px;
+  border-bottom: solid 1px #eee;
+}
+/* line 128, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__details__container .message {
+  margin-top: 20px;
+  margin-left: 25px;
+}
+/* line 132, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__details__container .select-box {
+  width: 95%;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 25px;
+  padding: 5px;
+}
+/* line 139, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__details__container .sell__item-category {
+  width: 95%;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 25px;
+  padding: 5px;
+}
+/* line 147, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__post__container {
+  margin-top: 30px;
+  padding-bottom: 50px;
+  border-bottom: solid 1px #eee;
+}
+/* line 151, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__post__container .message {
+  margin-top: 20px;
+  margin-left: 25px;
+}
+/* line 155, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__post__container .select-box {
+  width: 95%;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 25px;
+  padding: 5px;
+}
+/* line 163, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__price__container {
+  margin-top: 30px;
+  padding-bottom: 50px;
+  border-bottom: solid 1px #eee;
+}
+/* line 167, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__price__container .message {
+  margin-top: 20px;
+  margin-left: 25px;
+}
+/* line 171, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__price__container .content-flex {
+  display: flex;
+  justify-content: space-between;
+}
+/* line 174, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__price__container .content-flex .message {
+  margin-top: 20px;
+  margin-left: 25px;
+}
+/* line 178, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__price__container .content-flex .price {
+  margin-right: 20px;
+}
+/* line 180, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__price__container .content-flex .price .price-box {
+  width: 250px;
+  height: 50px;
+  text-align: right;
+}
+/* line 188, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__submit__container {
+  margin-top: 30px;
+  padding-bottom: 50px;
+  border-bottom: solid 1px #eee;
+}
+/* line 192, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__submit__container .button {
+  text-align: center;
+  margin-bottom: 10px;
+}
+/* line 195, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__submit__container .button .exhibition {
+  width: 350px;
+  background-color: #3ccAce;
+  color: #fff;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+/* line 206, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__submit__container .back {
+  text-align: center;
+}
+/* line 208, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__submit__container .back a {
+  text-decoration: none;
+  color: #3ccAca;
+  text-align: center;
+}
+/* line 215, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__attention__container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/* line 219, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__form__container .n__attention__container .message {
+  color: black;
+  font-size: 13px;
+  padding: 5px;
+}
+/* line 226, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__end__logo__container {
+  background-color: #f8f8f8;
+  height: 150px;
+}
+/* line 229, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__end__logo__container__end__logo {
+  padding-top: 25px;
+  margin: 0 auto;
+  width: 170px;
+}
+/* line 233, /Users/macuser/freemarket_sample_71a/app/assets/stylesheets/edit.scss */
+.n__container .n__end__logo__container__end__logo p {
+  text-align: center;
+}
